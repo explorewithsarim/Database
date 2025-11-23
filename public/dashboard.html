@@ -1,0 +1,39 @@
+<h2 id="welcome"></h2>
+<button id="logoutBtn">Logout</button>
+
+<script>
+const token = localStorage.getItem("token");
+
+if(!token){
+  window.location.href = "unauthorized.html";
+}
+
+const fetchData = async () => {
+  try {
+    const res = await fetch("/api/home", {
+      headers: { "Authorization": `Bearer ${token}` }
+    });
+
+    const data = await res.json();
+    console.log("Dashboard response:", res.status, data);
+
+    if(res.status === 200){
+      document.getElementById("welcome").innerText = data.message;
+    } else {
+      document.getElementById("welcome").innerText = data.message || "Error loading dashboard";
+    }
+
+  } catch(err) {
+    document.getElementById("welcome").innerText = "Server error";
+    console.error(err);
+  }
+};
+
+fetchData();
+
+document.getElementById("logoutBtn").addEventListener("click", () => {
+  localStorage.removeItem("token");
+  localStorage.removeItem("role");
+  window.location.href = "login.html";
+});
+</script>

@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+}
+
+body {
+  font-size: 62.4%;
+  font-family: sans-serif;
+  background-color: rgb(241, 237, 237);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.container {
+
+    width: 80%;
+    height: 700px;
+    margin: 40px auto;
+    border-radius: 18px;
+    background-color: rgb(255, 255, 255);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #3a3d98, #6b73ff, #000dff);
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(15px);
+  animation: fadeIn 0.6s ease;
+}
+
+.form-box h2 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Floating Labels */
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group input,
+.select-group select {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+}
+
+.input-group label {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  color: #e5e5e5;
+  font-size: 15px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 8px;
+  font-size: 13px;
+  color: #fff;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 17px;
+  border: none;
+  border-radius: 10px;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.login-text {
+  margin-top: 15px;
+  text-align: center;
+  color: #eee;
+}
+
+.login-text a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .btn {
+    font-size: 16px;
+  }
+}
+
+.container .parent_1 {
+  width: 80%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container .parent_1 h1 {
+  font-size: 40px;
+  text-align: center;
+}
+#logoutBtn {
+  display: block;
+}
+#loginSide {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container .parent_1 button {
+  width: 120px;
+  height: 40px;
+  color: white;
+  font-size: 22px;
+  border-style: none;
+  border-radius: 8px;
+  background-color: rgb(99, 94, 94);
+}
+
+.container .parent_1 button:hover {
+  background-color: black;
+}
+
+.container form {
+  width: 80%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container form input {
+  height: 40px;
+  font-size: 16px;
+  padding: 0px 10px;
+  border-radius: 6px;
+  margin-bottom: 30px;
+  border: 1px solid black;
+}
+
+.container form input:active {
+  background-color: rgb(204, 204, 204);
+}
+
+.container form select {
+  height: 40px;
+  font-size: 16px;
+  padding: 0px 10px;
+  border-radius: 6px;
+  margin-bottom: 30px;
+  border: 1px solid black;
+}
+
+.container form label {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.container form .submit {
+  width: 150px;
+  height: 40px;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 8px;
+  border-style: none;
+  background-color: rgb(99, 94, 94);
+
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container form .submit:hover {
+  background-color: black;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    height: 650px;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    width: 95%;
+  }
+}
